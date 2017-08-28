@@ -1,0 +1,32 @@
+.text-center {
+	font-size: 100px;
+	font-family: papyrus, cursive;
+	color: white;
+	font-weight: bold;
+}
+
+.container-fluid {
+	margin-top: 20px;
+	background: slategray;
+}
+
+#bod {
+	background-color: slategray;
+}
+
+#gifs {
+	height: 100%;
+	width: 100%;
+}
+
+label {
+	color: white;
+}
+
+.btn-success {
+	margin-right: 5px;
+}
+
+#btns {
+	margin-top: 20px;
+}
