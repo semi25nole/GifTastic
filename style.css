@@ -5,9 +5,10 @@
 	font-weight: bold;
 }
 
-.container-fluid {
+.container {
 	margin-top: 20px;
 	background: slategray;
+	flex-wrap: wrap;
 }
 
 #bod {
@@ -17,6 +18,8 @@
 #gifs {
 	height: 100%;
 	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
 }
 
 label {
@@ -29,4 +32,9 @@ label {
 
 #btns {
 	margin-top: 20px;
+}
+
+img {
+	width: 250px;
+	height: 250px;
 }

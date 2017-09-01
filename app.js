@@ -1,18 +1,19 @@
 var giffy = ["Joe Dirt", "Wedding Crashers", "Remember the Titans", "Old School", "Masterminds", "Meet the Millers", "Caddyshack",
-    "Legends of Bagger Vance", "Good Will Hunting", "Fast Times at Ridgemont High"
-];
+    "Legends of Bagger Vance", "Good Will Hunting", "Fast Times at Ridgemont High"];
 
-var gifs = $('#gif_input').val();
 var key = "5868968ce2344a4badf81372395500c1";
-var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifs + "&api_key=" + key;
 
+//var queryURL = 'https://api.giphy.com/v1/gifs/search?api_key=5868968ce2344a4badf81372395500c1&q=' + giffy[x] + '&limit=10&rating=PG-13&lang=en';
 
-function buttons() {
+for(var x = 0; x < giffy.length; x++){
+    console.log(giffy[x]);
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + giffy[x] + "&api_key=" + key + "&limit=10";
+}
 
-    $("#btns").empty();
+function buttons() {$("#btns").empty();
 
     for (var i = 0; i < giffy.length; i++) {
-
+    	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + giffy[i] + "&api_key=" + key + "&limit=10";
         var a = $('<button class="btn btn-success btn-xs">');
 
         a.addClass("movie");
@@ -35,7 +36,11 @@ $('#search').on("click", function(event) {
     buttons();
 })
 
-$('.movie').on("click", function() {
+$(document).on("click", '.movie', function() {
+
+    $('#gifs').empty();
+
+	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + $(this).attr('data-name') + "&api_key=" + key + "&limit=10";
 
     $.ajax({
             url: queryURL,
@@ -45,11 +50,11 @@ $('.movie').on("click", function() {
             console.log(queryURL);
             console.log(response);
             var results = response.data;
-            for (var i = 0; i < results.length; i++) {
+            for (var l = 0; l < results.length; l++) {
                 var movieDiv = $('<div>');
-                var p = $('<p>').text("Rating: " + results[i].rating);
+                var p = $('<p>').text("Rating: " + results[l].rating);
                 var movieImage = $('<img>');
-                movieImage.attr("src", results[i].images.fixed_height.url);
+                movieImage.attr("src", results[l].images.fixed_height.url);
                 movieDiv.append(p);
                 movieDiv.append(movieImage);
                 $("#gifs").append(movieDiv);
