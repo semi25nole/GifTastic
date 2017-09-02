@@ -15,7 +15,7 @@ function buttons() {
 
     for (var i = 0; i < giffy.length; i++) {
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giffy[i] + "&api_key=" + key + "&limit=10";
-        var a = $('<button class="btn btn-success btn-xs">');
+        var a = $('<button class="btn btn-warning btn-xs">');
 
         a.addClass("movie");
 

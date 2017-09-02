@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <title>GifTastic</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    
 </head>
 
 <body id="bod">
     <div class="container">
         <div class="text-center">
-            <h1>Gif Mania</h1>
+            <h1 id="head">Gif Mania</h1>
         </div>
         <!--This closes the text-center div-->
         <div class="row">
@@ -22,20 +22,11 @@
                 <button id="search" class="btn btn-primary btn-xs">Search</button>
             </div>
             <!--This closes the col div-->
-            <div id="btns">
+            <div id="btns" class="text-center">
             </div>
             <!--This closes the btns div-->
+            <div id="gifs" class="text-center"></div>
         </div>
-        <!--This closes the row div-->
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="gifs"></div>
-            </div>
-            <!--This closes the 2nd col-->
-        </div>
-        <!--This closes the 2nd row-->
     </div>
     <!--This closes the container div-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
