@@ -4,18 +4,17 @@ var giffy = ["Joe Dirt", "Wedding Crashers", "Remember the Titans", "Old School"
 
 var key = "5868968ce2344a4badf81372395500c1";
 
-//var queryURL = 'https://api.giphy.com/v1/gifs/search?api_key=5868968ce2344a4badf81372395500c1&q=' + giffy[x] + '&limit=10&rating=PG-13&lang=en';
 
 for (var x = 0; x < giffy.length; x++) {
     console.log(giffy[x]);
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + giffy[x] + "&api_key=" + key + "&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giffy[x] + "&api_key=" + key + "&limit=10";
 }
 
 function buttons() {
     $("#btns").empty();
 
     for (var i = 0; i < giffy.length; i++) {
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + giffy[i] + "&api_key=" + key + "&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giffy[i] + "&api_key=" + key + "&limit=10";
         var a = $('<button class="btn btn-success btn-xs">');
 
         a.addClass("movie");
@@ -45,7 +44,7 @@ $(document).ready(function() {
 
         $('#gifs').empty();
 
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + $(this).attr('data-name') + "&api_key=" + key + "&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + $(this).attr('data-name') + "&api_key=" + key + "&limit=10";
 
         $.ajax({
                 url: queryURL,
