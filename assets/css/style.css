@@ -8,6 +8,7 @@
 #bod {
 	background-color: slategray;
 	background: url(../images/background.jpg);
+	background-repeat: none;
 }
 
 #gifs {
